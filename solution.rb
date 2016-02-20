@@ -33,11 +33,11 @@ possible_paths.each do |path_array|
 	# Compare the point to their neightbouring point
 	# & compare with different direction
 	# Compare north
-	if y > 0 && array[y-1][x] < coor		
+	if y > 0 && array[y-1][x] < coord		
 		new_path = path_array.dup
 		new_path << [x,y-1]
 		# Store it into an array
-		possible_paths << new_pat		
+		possible_paths << new_path		
 	end
 	# Compare east
 	if x < dim[0] - 1 && array[y][x+1] < coord	
@@ -62,6 +62,19 @@ end
 
 # To find the max length of the array
 max_length = possible_paths.max_by{|a| a.length}
-p array_with_max_length = possible_paths.find_all{|x| x.length == max_length.length}
+array_with_max_length = possible_paths.find_all{|x| x.length == max_length.length}
 
-# Compare the max drop
+big_elevation_arr = []
+
+# Return the elevation instead of coordinates
+array_with_max_length.each do |arr|
+	elevation_arr = []
+	arr.each do |coord|
+		x = coord[0]
+		y = coord[1]
+
+		elevation_arr << array[y][x]	
+	end
+	big_elevation_arr << elevation_arr
+end
+
