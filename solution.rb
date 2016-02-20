@@ -64,15 +64,11 @@ max_length = possible_paths.max_by{|a| a.length}
 arrays_with_max_length = possible_paths.find_all{|x| x.length == max_length.length}
 
 all_elevation_arr = []
-
 # Return the elevation instead of coordinates
 arrays_with_max_length.each do |arr|
 	elevation_arr = []
 	arr.each do |coord|
-		x = coord[0]
-		y = coord[1]
-
-		elevation_arr << mountain[y][x]	
+		elevation_arr << mountain[coord[1]][coord[0]]	
 	end
 	all_elevation_arr << elevation_arr
 end
