@@ -5,5 +5,3 @@ File.open("simple.txt",'r') do |f|
 		array << line.split(" ")
 	end
 end
-
-p array
