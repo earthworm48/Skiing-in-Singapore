@@ -78,8 +78,9 @@ array_with_max_length.each do |arr|
 	big_elevation_arr << elevation_arr
 end
 
+# Compare the drop
 ans = big_elevation_arr.max_by do |a|
 	a.first - a.last
 end
 
-p ans
+puts "The longest path is the path of #{ans} with the length of #{ans.length}"
