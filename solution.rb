@@ -78,3 +78,8 @@ array_with_max_length.each do |arr|
 	big_elevation_arr << elevation_arr
 end
 
+ans = big_elevation_arr.max_by do |a|
+	a.first - a.last
+end
+
+p ans
