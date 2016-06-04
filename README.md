@@ -1,4 +1,5 @@
-# Skiing-in-Singapore : My solution for [Redmart Challenge](http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion/)
+# Skiing-in-Singapore : 
+### My solution for [Redmart Challenge](http://geeks.redmart.com/2015/01/07/skiing-in-singapore-a-coding-diversion/)
 
 Sometimes it's nice to take a break and code up a solution to a small, fun problem. Here is one some of our engineers enjoyed recently called Skiing In Singapore.
 
